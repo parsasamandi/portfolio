@@ -1,25 +1,21 @@
-# Cloudflare Tunnel configuration
-# Used to expose a local or Railway-hosted origin through Cloudflare's network.
+# Cloudflare Tunnel — reserved for backend API (if added later)
 #
-# SETUP (one-time):
-#   1. Install cloudflared:  brew install cloudflared
-#   2. Authenticate:         cloudflared tunnel login
-#   3. Create tunnel:        cloudflared tunnel create parsa-portfolio
-#   4. Copy the tunnel UUID into `tunnel:` below
-#   5. Route DNS:            cloudflared tunnel route dns parsa-portfolio parsasamandi.com
-#   6. Run tunnel:           cloudflared tunnel run parsa-portfolio
+# The portfolio frontend is served by Cloudflare Pages at parsasamandi.com.
+# This tunnel (ID: 1eb6ee5a-617f-4e57-91c8-6b866fa422a7) is available to
+# expose a Railway backend under api.parsasamandi.com if you ever add one.
 #
-# For Railway: set the `url` below to your Railway service URL.
+# To activate a backend:
+#   1. Update the ingress rule below with your Railway URL
+#   2. cloudflared tunnel route dns parsa-portfolio api.parsasamandi.com
+#   3. cloudflared tunnel run parsa-portfolio
 
-tunnel: <YOUR_TUNNEL_UUID>
-credentials-file: /Users/parsa_samandi/.cloudflared/<YOUR_TUNNEL_UUID>.json
+tunnel: 1eb6ee5a-617f-4e57-91c8-6b866fa422a7
+credentials-file: /Users/parsa_samandi/.cloudflared/1eb6ee5a-617f-4e57-91c8-6b866fa422a7.json
 
 ingress:
-  # Route traffic for parsasamandi.com to the origin
-  - hostname: parsasamandi.com
-    service: https://your-railway-service.up.railway.app
-    originRequest:
-      noTLSVerify: false
+  # Uncomment and update when adding a Railway backend:
+  # - hostname: api.parsasamandi.com
+  #   service: https://your-service.up.railway.app
 
-  # Catch-all: return 404 for any other hostname
+  # Catch-all
   - service: http_status:404
