@@ -1,0 +1,25 @@
+# Cloudflare Tunnel configuration
+# Used to expose a local or Railway-hosted origin through Cloudflare's network.
+#
+# SETUP (one-time):
+#   1. Install cloudflared:  brew install cloudflared
+#   2. Authenticate:         cloudflared tunnel login
+#   3. Create tunnel:        cloudflared tunnel create parsa-portfolio
+#   4. Copy the tunnel UUID into `tunnel:` below
+#   5. Route DNS:            cloudflared tunnel route dns parsa-portfolio parsasamandi.com
+#   6. Run tunnel:           cloudflared tunnel run parsa-portfolio
+#
+# For Railway: set the `url` below to your Railway service URL.
+
+tunnel: <YOUR_TUNNEL_UUID>
+credentials-file: /Users/parsa_samandi/.cloudflared/<YOUR_TUNNEL_UUID>.json
+
+ingress:
+  # Route traffic for parsasamandi.com to the origin
+  - hostname: parsasamandi.com
+    service: https://your-railway-service.up.railway.app
+    originRequest:
+      noTLSVerify: false
+
+  # Catch-all: return 404 for any other hostname
+  - service: http_status:404
