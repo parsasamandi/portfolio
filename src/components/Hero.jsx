@@ -18,7 +18,7 @@ export default function Hero() {
                     </h1>
                     <h2 className="hero__title">Software Developer</h2>
                     <p className="hero__subtitle">
-                        I build production web applications with deep{' '}
+                        I build production web applications with {' '}
                         <strong>Laravel</strong> expertise and deliver full-stack products at
                         high velocity using <strong>AI-native</strong> workflows.
                     </p>

@@ -29,7 +29,7 @@ export default function About() {
                                 production-quality products with speed and precision.
                             </p>
                             <p>
-                                I actively build with LLMs and AI — developing RAG pipelines,
+                                I have built with LLMs and AI — including RAG pipelines,
                                 semantic search engines, and chatbots in production. My{' '}
                                 <a
                                     href="https://github.com/parsasamandi/llm-learnings"
