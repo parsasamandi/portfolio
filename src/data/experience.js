@@ -3,7 +3,7 @@ export const experiences = [
         role: 'Lead Developer',
         company: 'Community Platform Development',
         location: 'Greater Vancouver, BC',
-        period: '2024 — Present',
+        period: 'Feb 2026 — Present',
         description: [
             'Architected and deployed a bilingual (English/Farsi) community platform live at rasoulallah.ca using Laravel 12, Filament 3, and Laravel Octane with FrankenPHP.',
             'Implemented content management, membership registration, prayer times, and event scheduling with role-based admin controls via Filament dashboard.',

@@ -5,7 +5,7 @@ import { projects } from '../data/projects';
 
 export default function Projects() {
     return (
-        <section id="projects" className="section section--alt">
+        <section id="projects" className="section">
             <div className="container">
                 <FadeIn>
                     <h2 className="section__title">

@@ -72,7 +72,7 @@ export const projects = [
             'A portfolio website for an IT company featuring a landing page, AI chat widget, blog, and full admin panel for content management. Includes dark/light theme toggle and Cal.com booking integration.',
         tech: ['Next.js 16', 'TypeScript', 'React 19', 'Supabase', 'Tailwind CSS'],
         badge: 'AI-Native',
-        liveUrl: null,
+        liveUrl: 'https://it-tech-portfolio.pages.dev/',
         githubUrl: 'https://github.com/parsasamandi/IT-tech-portfolio',
         featured: false,
     },

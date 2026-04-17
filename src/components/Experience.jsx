@@ -3,7 +3,7 @@ import { experiences } from '../data/experience';
 
 export default function Experience() {
     return (
-        <section id="experience" className="section">
+        <section id="experience" className="section section--alt">
             <div className="container">
                 <FadeIn>
                     <h2 className="section__title">

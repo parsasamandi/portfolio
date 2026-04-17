@@ -3,7 +3,7 @@ import { MapPin, Briefcase, BrainCircuit } from 'lucide-react';
 
 export default function About() {
     return (
-        <section id="about" className="section">
+        <section id="about" className="section section--alt">
             <div className="container">
                 <FadeIn>
                     <h2 className="section__title">

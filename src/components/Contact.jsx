@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
     return (
-        <section id="contact" className="section">
+        <section id="contact" className="section section--alt">
             <div className="container">
                 <FadeIn>
                     <h2 className="section__title">
