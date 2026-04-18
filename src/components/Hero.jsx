@@ -1,3 +1,17 @@
+/**
+ * Hero.jsx
+ * Full-screen landing section — the first thing a visitor sees.
+ * Uses Framer Motion directly (not FadeIn) for the page-load animation
+ * since the content should animate on mount, not on scroll.
+ *
+ * Contains:
+ *   - Name, title, and one-sentence subtitle
+ *   - CTA buttons: View Work, Resume (PDF), Contact
+ *   - Social links: GitHub, LinkedIn
+ *
+ * Note: The Hero sits on bg-primary (no section--alt).
+ * All copy must follow the standards in docs/CONTENT_GUIDE.md.
+ */
 import { motion } from 'framer-motion';
 import { Mail, ArrowDown, FileDown } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';

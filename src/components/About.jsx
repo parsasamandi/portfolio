@@ -1,3 +1,17 @@
+/**
+ * About.jsx
+ * About Me section — personal background, methodology, and availability.
+ * Uses section--alt (bg-secondary) to differentiate from the Hero above it.
+ *
+ * Layout: two-column grid
+ *   Left  — four paragraphs of copy (background, AI-native, past LLM work, status)
+ *   Right — three detail cards (Location, Building With, Status)
+ *
+ * Copy rules (see docs/CONTENT_GUIDE.md):
+ *   - AI/LLM work is past tense ("have built", "including")
+ *   - Current focus is software development (Laravel, PHP, full-stack)
+ *   - Do not mention specific technologies that belong in the Skills section
+ */
 import FadeIn from './FadeIn';
 import { MapPin, Briefcase, BrainCircuit } from 'lucide-react';
 

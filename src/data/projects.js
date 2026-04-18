@@ -1,3 +1,20 @@
+/**
+ * projects.js
+ * Source of truth for the Projects section card grid.
+ * Rendered by components/Projects.jsx in array order.
+ *
+ * Each entry shape:
+ *   title       {string}       — project name
+ *   subtitle    {string}       — format: 'What it is · One key detail'
+ *   description {string}       — 1–2 sentences in product voice (no "I")
+ *   tech        {string[]}     — technologies used
+ *   badge       {string}       — 'Hands-On' | 'AI-Native'
+ *   liveUrl     {string|null}  — live demo URL, or null if not publicly deployed
+ *   githubUrl   {string|null}  — GitHub repo URL, or null if private
+ *   featured    {boolean}      — true = shown prominently in the main grid
+ *
+ * To add a new project: prepend to this array (most recent/prominent first).
+ */
 export const projects = [
     {
         title: 'Community Platform',

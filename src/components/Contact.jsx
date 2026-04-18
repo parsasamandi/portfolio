@@ -1,3 +1,15 @@
+/**
+ * Contact.jsx
+ * Contact section — direct links to reach out.
+ * Uses section--alt (bg-secondary) to alternate from Projects above.
+ *
+ * Contains:
+ *   - Primary CTA button: mailto link
+ *   - Contact details: email, GitHub, LinkedIn, location
+ *
+ * No form — intentional. Direct links are lower friction and more reliable.
+ * All contact info is hardcoded here (no data file needed — it never changes).
+ */
 import FadeIn from './FadeIn';
 import { Mail, MapPin } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';

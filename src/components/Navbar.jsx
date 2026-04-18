@@ -1,13 +1,27 @@
+/**
+ * Navbar.jsx
+ * Fixed top navigation bar with:
+ *   - Smooth scroll anchor links to all page sections
+ *   - Resume PDF download link
+ *   - Light / Dark / System theme toggle (cycles via ThemeContext)
+ *   - Responsive hamburger menu for mobile (width ≤ 768px)
+ *   - Glassmorphism background applied after 20px of scroll
+ *
+ * To add a new section link: add an entry to the navLinks array below.
+ * Theme cycle order: light → dark → system → light
+ */
 import { useState, useEffect } from 'react';
 import { Menu, X, FileDown, Sun, Moon, Monitor } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
+// Maps each theme mode to its display icon, label, and the next mode in the cycle
 const THEME_META = {
     light: { icon: <Sun size={16} />, label: 'Light', next: 'Dark' },
     dark: { icon: <Moon size={16} />, label: 'Dark', next: 'System' },
     system: { icon: <Monitor size={16} />, label: 'System', next: 'Light' },
 };
 
+// Canonical list of navigation links — keep in sync with section IDs in App.jsx
 const navLinks = [
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },

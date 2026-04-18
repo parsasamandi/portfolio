@@ -1,3 +1,15 @@
+/**
+ * Experience.jsx
+ * Professional experience section — rendered as a vertical timeline.
+ * Uses section--alt (bg-secondary) to alternate from Skills above.
+ *
+ * Data source: data/experience.js (array, most recent first)
+ * Each entry renders as a card with: role, company, period, badge, bullets, tech tags.
+ *
+ * Timeline visual: a vertical line runs down the left with dot markers per entry.
+ * To add or edit an experience: modify data/experience.js only — do not change this component.
+ * Period format must be: 'Mon YYYY — Present' or 'Mon YYYY — Mon YYYY' (em dash, not hyphen).
+ */
 import FadeIn from './FadeIn';
 import { experiences } from '../data/experience';
 

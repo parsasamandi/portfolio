@@ -1,3 +1,18 @@
+/**
+ * Projects.jsx
+ * Featured projects section — rendered as a two-column card grid.
+ * Uses bg-primary (no section--alt) to alternate from Experience above.
+ *
+ * Data source: data/projects.js (array)
+ *   featured: true  — shown in the main grid
+ *   featured: false — also shown (currently all projects display)
+ *
+ * Each card shows: title, subtitle, badge, description, tech tags, and action links.
+ * Links render conditionally — only shown when liveUrl or githubUrl is non-null.
+ * FadeIn delays are capped at 0.4s (Math.min) per animation standards.
+ *
+ * To add or edit a project: modify data/projects.js only.
+ */
 import FadeIn from './FadeIn';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';

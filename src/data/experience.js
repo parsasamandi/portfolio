@@ -1,3 +1,19 @@
+/**
+ * experience.js
+ * Source of truth for the Experience section timeline.
+ * Rendered by components/Experience.jsx in array order (most recent first).
+ *
+ * Each entry shape:
+ *   role        {string}   — job title
+ *   company     {string}   — organisation name
+ *   location    {string}   — city / region
+ *   period      {string}   — 'Mon YYYY — Present' or 'Mon YYYY — Mon YYYY' (em dash)
+ *   description {string[]} — max 3 bullets, each starting with a past-tense action verb
+ *   tech        {string[]} — technologies used
+ *   badge       {string}   — 'Hands-On' | 'AI-Native'
+ *
+ * To add a new entry: prepend to this array (most recent at index 0).
+ */
 export const experiences = [
     {
         role: 'Lead Developer',
