@@ -24,7 +24,7 @@ export default function Projects() {
 
                 <div className="projects__grid">
                     {projects.map((project, index) => (
-                        <FadeIn key={index} delay={index * 0.1}>
+                        <FadeIn key={index} delay={Math.min(index * 0.1, 0.4)}>
                             <div
                                 className={`card projects__card ${project.featured ? 'projects__card--featured' : ''}`}
                             >

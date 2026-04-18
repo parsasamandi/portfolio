@@ -60,7 +60,7 @@ export default function Navbar() {
                         </a>
                     ))}
                     <a
-                        href="/resume.pdf"
+                        href="/ParsaSamandiResume.pdf"
                         target="_blank"
                         rel="noreferrer"
                         className="btn btn--sm btn--outline"
