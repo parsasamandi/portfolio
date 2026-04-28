@@ -32,7 +32,7 @@ export const experiences = [
         role: 'Web Developer (Volunteer)',
         company: 'Golestan Foundation',
         location: 'Remote',
-        period: '2024 — Present',
+        period: 'Jan 2024 — Present',
         description: [
             'Developed a scalable multi-user Laravel platform with admin dashboard and API layer, streamlining financial data management for 19 organizations.',
             'Replaced a manual Google Forms-based workflow with a structured Laravel database solution, reducing data entry errors and improving reporting accuracy.',

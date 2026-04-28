@@ -17,22 +17,22 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  return (
-    // ThemeProvider must be the outermost wrapper — all components read theme via useTheme()
-    <ThemeProvider>
-      {/* Navbar sits outside <main> so it overlays all sections */}
-      <Navbar />
-      <main>
-        {/* Sections alternate bg-primary / bg-secondary — do not break this pattern */}
-        <Hero />        {/* bg-primary */}
-        <About />       {/* bg-secondary (section--alt) */}
-        <Skills />      {/* bg-primary */}
-        <Experience />  {/* bg-secondary (section--alt) */}
-        <Projects />    {/* bg-primary */}
-        <Contact />     {/* bg-secondary (section--alt) */}
-      </main>
-      <Footer />
-    </ThemeProvider>
+    return (
+        // ThemeProvider must be the outermost wrapper — all components read theme via useTheme()
+        <ThemeProvider>
+            {/* Navbar sits outside <main> so it overlays all sections */}
+            <Navbar />
+            <main>
+                {/* Sections alternate bg-primary / bg-secondary — do not break this pattern */}
+                <Hero />        {/* bg-primary */}
+                <About />       {/* bg-secondary (section--alt) */}
+                <Skills />      {/* bg-primary */}
+                <Experience />  {/* bg-secondary (section--alt) */}
+                <Projects />    {/* bg-primary */}
+                <Contact />     {/* bg-secondary (section--alt) */}
+            </main>
+            <Footer />
+        </ThemeProvider>
   );
 }
 

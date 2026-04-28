@@ -11,12 +11,18 @@
  * Links render conditionally — only shown when liveUrl or githubUrl is non-null.
  * FadeIn delays are capped at 0.4s (Math.min) per animation standards.
  *
+ * Badge mapping: 'Hands-On' → badge--primary | 'AI-Native' → badge--secondary
+ * React keys: use project.title (unique across dataset) for stability on reorders.
+ *
  * To add or edit a project: modify data/projects.js only.
  */
 import FadeIn from './FadeIn';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { projects } from '../data/projects';
+
+/** Resolves the BEM badge modifier class from a badge string value. */
+const badgeClass = (badge) => `badge badge--${badge === 'Hands-On' ? 'primary' : 'secondary'}`;
 
 export default function Projects() {
     return (
@@ -39,7 +45,7 @@ export default function Projects() {
 
                 <div className="projects__grid">
                     {projects.map((project, index) => (
-                        <FadeIn key={index} delay={Math.min(index * 0.1, 0.4)}>
+                        <FadeIn key={project.title} delay={Math.min(index * 0.1, 0.4)}>
                             <div
                                 className={`card projects__card ${project.featured ? 'projects__card--featured' : ''}`}
                             >
@@ -48,9 +54,7 @@ export default function Projects() {
                                         <h3 className="projects__title">{project.title}</h3>
                                         <p className="projects__subtitle">{project.subtitle}</p>
                                     </div>
-                                    <span
-                                        className={`badge badge--${project.badge === 'Hands-On' ? 'primary' : 'secondary'}`}
-                                    >
+                                    <span className={badgeClass(project.badge)}>
                                         {project.badge}
                                     </span>
                                 </div>

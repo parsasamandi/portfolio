@@ -64,6 +64,7 @@ export default function Contact() {
                                 <FaLinkedin size={18} />
                                 <span>linkedin.com/in/parsa-samandi</span>
                             </a>
+                            {/* Location has no href — intentional div instead of <a> */}
                             <div className="contact__link">
                                 <MapPin size={18} />
                                 <span>Burnaby, BC, Canada</span>

@@ -9,9 +9,15 @@
  * Timeline visual: a vertical line runs down the left with dot markers per entry.
  * To add or edit an experience: modify data/experience.js only — do not change this component.
  * Period format must be: 'Mon YYYY — Present' or 'Mon YYYY — Mon YYYY' (em dash, not hyphen).
+ *
+ * Badge mapping: 'Hands-On' → badge--primary | 'AI-Native' → badge--secondary
+ * React keys: derived from company + period for stability on reorders.
  */
 import FadeIn from './FadeIn';
 import { experiences } from '../data/experience';
+
+/** Resolves the BEM badge modifier class from a badge string value. */
+const badgeClass = (badge) => `badge badge--${badge === 'Hands-On' ? 'primary' : 'secondary'}`;
 
 export default function Experience() {
     return (
@@ -25,7 +31,7 @@ export default function Experience() {
 
                 <div className="timeline">
                     {experiences.map((exp, index) => (
-                        <FadeIn key={index} delay={index * 0.15}>
+                        <FadeIn key={`${exp.company}-${exp.period}`} delay={index * 0.15}>
                             <div className="timeline__item">
                                 <div className="timeline__dot" />
                                 <div className="card timeline__card">
@@ -38,9 +44,7 @@ export default function Experience() {
                                         </div>
                                         <div className="timeline__meta">
                                             <span className="timeline__period">{exp.period}</span>
-                                            <span
-                                                className={`badge badge--${exp.badge === 'Hands-On' ? 'primary' : 'secondary'}`}
-                                            >
+                                            <span className={badgeClass(exp.badge)}>
                                                 {exp.badge}
                                             </span>
                                         </div>
