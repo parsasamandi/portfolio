@@ -30,11 +30,12 @@ export default function Hero() {
                     <h1 className="hero__name">
                         Parsa Samandi<span>.</span>
                     </h1>
-                    <h2 className="hero__title">Software Developer</h2>
+                    <h2 className="hero__title">AI-Native Full-Stack Developer</h2>
                     <p className="hero__subtitle">
-                        I build production web applications with {' '}
-                        <strong>Laravel</strong> expertise and deliver full-stack products at
-                        high velocity using <strong>AI-native</strong> workflows.
+                        I build production web applications across the full stack. I bring
+                        hands-on experience from personal projects exploring{' '}
+                        <strong>AI-native workflows</strong>, <strong>LLM APIs</strong>, and{' '}
+                        <strong>retrieval-augmented generation</strong>.
                     </p>
 
                     <div className="hero__actions">
