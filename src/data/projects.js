@@ -22,7 +22,7 @@ export const projects = [
         description:
             'A bilingual (English/Farsi) community website and admin dashboard for an Islamic center in Greater Vancouver. Features prayer times, events, courses, library, membership registration, and a comprehensive content management system powered by Filament 3.',
         tech: ['Laravel 12', 'Filament 3', 'Laravel Octane', 'FrankenPHP', 'Docker', 'Railway'],
-        badge: 'Hands-On',
+        badge: 'AI-Native',
         liveUrl: 'https://www.rasoulallah.ca/',
         githubUrl: null,
         featured: true,
