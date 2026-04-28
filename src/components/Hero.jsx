@@ -33,7 +33,7 @@ export default function Hero() {
                     <h2 className="hero__title">AI-Native Full-Stack Developer</h2>
                     <p className="hero__subtitle">
                         I build production web applications across the full stack. I bring
-                        hands-on experience from personal projects exploring{' '}
+                        practical experience from personal projects exploring{' '}
                         <strong>AI-native workflows</strong>, <strong>LLM APIs</strong>, and{' '}
                         <strong>retrieval-augmented generation</strong>.
                     </p>
